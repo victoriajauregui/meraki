@@ -4,7 +4,7 @@
 body{     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;}
+    line-height: 1.5; }
 
 
 #header{background-color: rgb(189, 230, 221); height: 20%; position: absolute;
@@ -13,6 +13,41 @@ body{     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helve
     width: 100%;
     box-shadow: 0px 1px 5px 0px grey; ;}
 
+    carousel {
+        position: relative;
+      }
+      
+      .carousel.pointer-event {
+        touch-action: pan-y;
+      }
+      
+      .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        @include clearfix();
+      }
+      
+      .carousel-item {
+        position: relative;
+        display: none;
+        float: left;
+        width: 100%;
+        margin-right: -100%;
+        backface-visibility: hidden;
+        @include transition($carousel-transition);
+      }
+      
+      .carousel-item.active,
+      .carousel-item-next,
+      .carousel-item-prev {
+        display: block;
+      }
+
 .navbar-nav {text-align: right;}
+
+.titulos { text-align: center}
+.text2 {margin-right: 62%;}
+
 
 
